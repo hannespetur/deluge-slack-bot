@@ -40,4 +40,3 @@ Insert you token into the script (line 5). You can add a bot here: [https://my.s
 * Allow users to add torrent to deluge (via link).
 * Add an option to show when download starts.
 * Add an option to check torrent status.
-* Get token from another file not in this repo.
