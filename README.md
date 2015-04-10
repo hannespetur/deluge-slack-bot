@@ -23,10 +23,8 @@ Due to a conflict with another package called "node" you will need to run the fo
 Insert you token into a token.txt file or into the script (line 14). You can create a slack bot here: [https://my.slack.com/services/new/bot](https://my.slack.com/services/new/bot) and after the creation you will get the token.
 
 ## Run the bot directly with coffeescript
-	$ sudo npm install coffee-script
-	$ sudo npm install slack-client
-	$ sudo npm install chokidar
-	$ sudo npm install deluge
+
+	$ npm install
 
 If you have coffee in your path then use
 
@@ -37,9 +35,8 @@ if you don't you can use
 	$ node_modules/coffee-script/bin/coffee deluge.coffee
 
 ## Run the bot with nodejs
-	$ sudo npm install coffee-script
-	$ sudo npm install slack-client
-	$ sudo npm install chokidar
+
+	$ npm install
 	$ coffee -c deluge.coffee
 	$ node deluge.js
 
@@ -48,8 +45,8 @@ or (if you don't have coffee in your path)
 	$ node_modules/coffee-script/bin/coffee -c deluge.coffee
 	$ node deluge.js
 
-# Todo
-* Create a install script.
-
 # Notes
 Make sure deluge can have write access on dlAdded.log and dlComplete.log.
+
+# License
+(MIT license)
