@@ -20,20 +20,33 @@ Due to a conflict with another package called "node" you will need to run the fo
 
 	$ cd /usr/local/bin; sudo ln -s /usr/bin/nodejs node
 
-Insert you token into the script (line 5). You can add a bot here: [https://my.slack.com/services/new/bot](https://my.slack.com/services/new/bot) and get the token there.
+Insert you token into a token.txt file or into the script (line 14). You can create a slack bot here: [https://my.slack.com/services/new/bot](https://my.slack.com/services/new/bot) and after the creation you will get the token.
 
 ## Run the bot directly with coffeescript
-	npm install coffee-script
-	npm install slack-client
-	npm install chokidar
-	node_modules/coffee-script/bin/coffee deluge.coffee 
+	$ npm install coffee-script
+	$ npm install slack-client
+	$ npm install chokidar
+	$ npm install deluge
+
+If you have coffee in your path then use
+
+	$ coffee deluge.coffee
+
+if you don't you can use
+
+	$ node_modules/coffee-script/bin/coffee deluge.coffee
 
 ## Run the bot with nodejs
-	npm install coffee-script
-	npm install slack-client
-	npm install chokidar
-	node_modules/coffee-script/bin/coffee -c deluge.coffee 
-	node deluge.js
+	$ npm install coffee-script
+	$ npm install slack-client
+	$ npm install chokidar
+	$ coffee -c deluge.coffee
+	$ node deluge.js
+
+or (if you don't have coffee in your path)
+
+	$ node_modules/coffee-script/bin/coffee -c deluge.coffee
+	$ node deluge.js
 
 # Todo
 * Create a install script.

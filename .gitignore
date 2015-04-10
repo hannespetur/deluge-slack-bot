@@ -29,5 +29,5 @@ node_modules
 # Token
 token.txt
 
-# Javascript files
+# Javascript files (we only need to have the Coffeescript files)
 *.js
