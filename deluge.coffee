@@ -96,40 +96,18 @@ slack.on 'message', (message) ->
     cmd_add = 'deluge add '
 
     if text.startsWith(cmd_add)
+      url = text.split('')[cmd_add.length..-1].join('')
       if text.startsWith(cmd_add+'magnet:')
-        console.log "Adding torrent with a magnet link"
-      else if text.startsWith(cmd_add+'http:')
-        console.log "Adding torrent with a http link"
+        console.log "Adding torrent with a magnet link: '"+url+"'"
+      else if text.startsWith(cmd_add+'<http:')
+        url = url[1..-2]
+        console.log "Adding torrent with a http link: '"+url+"'"
 
-      text_array = text.split('')
-      url = text_array[cmd_add.length..-1].join('')
-      console.log "Url found: '"+url+"'"
       deluge.add(url,'~/delugeDownloads/', (error,result) -> 
         if error
           console.error error
-          return
-        )
-
-    # response = text.split('').reverse().join('')
-    # channel.send response
-    # console.log """
-    #   @#{slack.self.name} responded with "#{response}"
-    # """
-#  else
-#    #this one should probably be impossible, since we're in slack.on 'message' 
-#    typeError = if type isnt 'message' then "unexpected type #{type}." else null
-#    #Can happen on delete/edit/a few other events
-#    textError = if not text? then 'text was undefined.' else null
-#    #In theory some events could happen with no channel
-#    channelError = if not channel? then 'channel was undefined.' else null
-#
-#    #Space delimited string of my errors
-#    errors = [typeError, textError, channelError].filter((element) -> element isnt null).join ' '
-#
-#    console.log """
-#      @#{slack.self.name} could not respond. #{errors}
-#    """
-
+          channel.send "Torrent with link: '"+url+"' could not be added!"
+      )
 
 slack.on 'error', (error) ->
   console.error "Error: #{error}"

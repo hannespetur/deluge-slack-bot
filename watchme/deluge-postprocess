@@ -1,0 +1,6 @@
+#!/bin/bash
+TORRENT_ID=$1
+TORRENT_NAME=$2
+TORRENT_PATH=$3
+
+echo $TORRENT_NAME > /path/to/watchme/dlComplete.log
