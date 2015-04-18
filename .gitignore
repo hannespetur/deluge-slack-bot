@@ -34,3 +34,6 @@ token.txt
 
 # Cookies
 cookies.json
+
+# npm
+.npmignore

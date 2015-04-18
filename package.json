@@ -1,7 +1,7 @@
 {
   "name": "deluge-slack-bot",
-  "version": "0.0.1",
-  "description": "A slack bot that can interact with deluge",
+  "version": "1.0.0",
+  "description": "A slack bot (www.slack.com) that can interact with deluge.",
   "author": "Hannes Petur Eggertsson <hannespetur@gmail.com>",
   "contributors": [{
     "name": "Hannes Petur Eggertsson",
