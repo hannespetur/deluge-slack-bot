@@ -28,8 +28,8 @@ token_fun = ->
         console.error err;
         return;
       return token
-    console.log "Using token from file:", token
-    return token
+    console.log "Using token from file:", token.replace(/\n$/, '')
+    return token.replace(/\n$/, '')
   else
     # Add a bot at https://my.slack.com/services/new/bot and copy the token here or in a token.txt file.
     token = "<<Insert token here or in token.txt>>"
@@ -70,7 +70,7 @@ slack.on 'open', ->
         throw err
       console.log 'The file now has:', data
       for channel in channels
-        channel.send "Download complete: "+data
+        channel.send "Download complete: "+data.replace(/\n$/, '')
       return
     return
   )
@@ -88,7 +88,7 @@ slack.on 'open', ->
         throw err
       console.log 'The file now has:', data
       for channel in channels
-        channel.send "New download: "+data
+        channel.send "New download: "+data.replace(/\n$/, '')
       return
     return
   )
