@@ -2,31 +2,13 @@
 
 Semi-ready for release, you'll only need to use this version of the nodejs [deluge project](https://github.com/hannespetur/deluge) instead of the npm one.
 
-## Preliminaries (Ubuntu)
-Install git and clone the repo
+## Install
 
-	$ sudo apt-get install git
-	$ git clone https://github.com/hannespetur/deluge-slack-bot.git
+	$ npm install deluge-slack-bot
+	$ cd node_modules/deluge-slack-bot/
 
-npm package manager
-
-	$ sudo apt-get install npm
-
-nodejs
-
-	$ sudo apt-get install nodejs
-
-Due to a conflict with another package called "node" you will need to run the following commands afterwards to make sure node will refer to nodejs
-
-	$ cd /usr/local/bin; sudo ln -s /usr/bin/nodejs node
-
-Insert you token into a token.txt file or into the script (line 14). You can create a slack bot here: [https://my.slack.com/services/new/bot](https://my.slack.com/services/new/bot) and after the creation you will get the token.
-
-## Run the bot directly with coffeescript
-
-	$ npm install
-
-If you have coffee in your path then use
+## Usage 
+Insert your token into a token.txt file (in same directory the index file is in) or into the script. You can create a slack bot here: [https://my.slack.com/services/new/bot](https://my.slack.com/services/new/bot) and after the creating the bot you will get the token. If you have coffee in your path you can run the bot using
 
 	$ coffee index.coffee
 
@@ -44,6 +26,32 @@ or (if you don't have coffee in your path)
 
 	$ node_modules/coffee-script/bin/coffee -c index.coffee
 	$ node index.js
+
+## Install from github
+Install git and clone the repo
+
+	$ sudo apt-get install git
+	$ git clone https://github.com/hannespetur/deluge-slack-bot.git
+
+npm package manager
+
+	$ sudo apt-get install npm
+
+nodejs
+
+	$ sudo apt-get install nodejs
+
+Due to a conflict with another package called "node" you may need to run the following commands afterwards to make sure node will refer to nodejs
+
+	$ cd /usr/local/bin; sudo ln -s /usr/bin/nodejs node
+
+
+
+## Run the bot directly with coffeescript
+
+	$ npm install
+
+
 
 # Notes
 * Make sure deluge web ui can have write access on dlAdded.log and dlComplete.log. 
