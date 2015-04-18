@@ -31,3 +31,6 @@ token.txt
 
 # Javascript files (we only need to have the Coffeescript files)
 *.js
+
+# Cookies
+cookies.json
