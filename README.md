@@ -46,7 +46,14 @@ or (if you don't have coffee in your path)
 	$ node deluge.js
 
 # Notes
-Make sure deluge can have write access on dlAdded.log and dlComplete.log.
+* Make sure deluge web ui can have write access on dlAdded.log and dlComplete.log. 
+* If you need to use cookies (e.g. to download torrents from private trackers), add a cookies.json using the format:
+
+	{
+		"http://example.org/": "uid=1234;pass=xxxx;",
+		"http://www.example.org/": "uid=1234;pass=xxxx;",
+		"https://www.awesome-site.com/": "h_sl=aaaa;h_sp=bbbb;h_su=cccc;"
+	}
 
 # License
 (MIT license)
