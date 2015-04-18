@@ -28,22 +28,22 @@ Insert you token into a token.txt file or into the script (line 14). You can cre
 
 If you have coffee in your path then use
 
-	$ coffee deluge.coffee
+	$ coffee index.coffee
 
 if you don't you can use
 
-	$ node_modules/coffee-script/bin/coffee deluge.coffee
+	$ node_modules/coffee-script/bin/coffee index.coffee
 
 ## Run the bot with nodejs
 
 	$ npm install
-	$ coffee -c deluge.coffee
-	$ node deluge.js
+	$ coffee -c index.coffee
+	$ node index.js
 
 or (if you don't have coffee in your path)
 
-	$ node_modules/coffee-script/bin/coffee -c deluge.coffee
-	$ node deluge.js
+	$ node_modules/coffee-script/bin/coffee -c index.coffee
+	$ node index.js
 
 # Notes
 * Make sure deluge web ui can have write access on dlAdded.log and dlComplete.log. 
