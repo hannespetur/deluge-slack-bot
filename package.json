@@ -1,6 +1,6 @@
 {
   "name": "deluge-slack-bot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A slack bot (www.slack.com) that can interact with deluge.",
   "author": "Hannes Petur Eggertsson <hannespetur@gmail.com>",
   "contributors": [{
@@ -28,7 +28,9 @@
     "coffee-script": "~1.9.1",
     "slack-client": "~1.4.0",
     "chokidar": "~1.0.1",
-    "deluge": "~1.7.0"
+    "deluge": "~1.7.0",
+    "fs": "latest",
+    "path": "latest"
   },
   "license": "MIT"
 }
